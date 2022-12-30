@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página3</title>
+    <style>
+        body {
+            background-color: lightcoral;
+        }
+        main {
+            background-color: white;
+            width: 850px;
+            height: 720px;
+            margin: auto;
+            padding: 2%;
+        }
+
+        .a {
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            padding: 2%;
+            background-color:black ;
+            color: white;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <main>
+    <div class="a" onmouseenter="entrar()" onclick="clique()" onmouseout="sair()">Passe o mouse aqui ou clique</div>
+    </main>
+    <script>
+        var a = document.querySelector('.a')
+        function entrar () {
+                a.style.background = 'red'
+                a.innerHTML = `Mireli Feia`
+        }
+
+        function clique () {
+            a.style.background = `red`
+            a.innerHTML = `Pau no furebis`
+        } 
+
+        function sair () {
+            a.style.background = `black`
+            a.innerHTML = `Sai dai cara de priquito`
+        }
+    </script>
+</body>
+</html>

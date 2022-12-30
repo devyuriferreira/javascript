@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-titulo</title>
+</head>
+<body>
+    <h1>Descobrindo sua aptidão ao voto</h1>
+    Insira sua idade: <input type="number" name="voto" id="idade">
+    <input type="button" value="Verificar"  onclick="votar()">
+    <div id="res">Confira aqui o seu resultado</div>
+    <script>
+      let idade = document.getElementById('idade')
+      function votar () {
+        let i = Number(idade.value)
+        let res = document.getElementById('res')
+        res.innerHTML = `A sua idade é ${i} anos, e você está: `
+        if (i < 16) {
+          res.innerHTML += `apto a não votar!`
+        } else if (i >= 16 && i < 18 ) {
+          res.innerHTML += `com o voto opcional!`
+        } else if (i >= 18 && i < 65) {
+          res.innerHTML += `apto a votar!`
+        } else {
+          res.innerHTML += `com o voto opcional!`
+        }}
+    </script>
+</body>
+</html>
