@@ -4,20 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript</title>
+    <title>Detran CE</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+          padding: 0px;
+          margin: 0px;
+      }
+
+      header {
+        background-color: yellow;
+        padding-top: 10px;
+        margin-top: 0px;
+      }
+
+      header > h1 {
+        text-align: center;
+        font-size: 2.3em;
+        
+      }
+
+      header > a {
+        text-decoration: none;
+        color: black;
+        margin-left: 15px;
+      }
+
+      header > a:hover {
+        text-decoration: underline;
+        color: gray;
+      }
+
+      .botao{
+        width: 75px;
+        background-color: black;
+        color: white;
+        border-radius: 6px;
+      }
+    </style>
 </head>
 <body>
-    <h1>Sistema de multas</h1>
-    Insira sua velocidade: <input type="number" name="vel" id="vel1">: Km/h
-    <input type="button" value="Verificar" onclick="calcular()">
+  <header>
+    <h1>Detran CE</h1>
+    <a href="#">Contato</a>
+    <a href="#">Emissao de documentos</a>
+  </header>
+  <main>
+  <h1>Sistema de multas</h1>
+  <p>Via de 60km/h</p>
+  Insira sua velocidade: <input type="number" name="vel" id="vel1">: Km/h
+  <input type="button" value="Verificar" onclick="calcular()" class="botao">
     <div id="res">Seu resultado é:</div>
+  </main>
     <script>
         let vel = document.getElementById('vel1')
         function calcular () {
           let v = Number(vel.value)
           let res = document.getElementById('res')
           res.innerHTML = `Sua velocidade atual é de ${v}Km/h!`
-          if (v > 80) {
+          if (v > 60) {
             res.innerHTML += ` Parado aí vagabundo, você está <strong>MULTADO</strong> por excesso de velocidade!`
           } else {
             res.innerHTML += ` Use sempre o cinto de segurança, e boa viagem!`
